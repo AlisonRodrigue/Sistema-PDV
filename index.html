@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Goki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastroCliente.css">
 </head>
+
 <body>
-    
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html" class="active">🏠 Painel Principal</a></li>
+            <li><a href="cadastroProdutos.html">📦 Sobre</a></li>
+            <li><a href="vendas.html">💰 Duvidas</a></li>
+            <li><a href="investimentos.html" >💰 Contato</a></li>
+        </ul>
+    </div>
+    <main class="content">
+        <div class="main-layout">
+            <form action="">
+                <h1>Cadastro</h1>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="Nome">Nome</label>
+                        <input type="text" id="nomeCliente" class="campoCliente" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" id="emailCliente" class="campoCliente" placeholder="@email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Senha">Senha</label>
+                        <input type="password" id="senhaCliente" class="campoCliente" placeholder="Digite uma senha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Senha">Senha</label>
+                        <input type="password" id="senhaCliente" class="campoCliente" placeholder="Digite uma senha acima" required>
+                    </div>
+                    <div class="btnCadastro">
+                        <button id="btnCadastro" class="btn-submit">Cadastrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="cadastroCliente.js"></script>
 </body>
+
 </html>

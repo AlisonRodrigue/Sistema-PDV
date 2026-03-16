@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333333;
+    margin: 0;
+}
+.main-layout{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    width: 500px;
+    height: 500px;
+}
+
+.form-grid{
+    display: inline;
+    grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
+    gap: 20px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #666;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid  #d1d8e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+input:focus {
+    outline: none;
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+.btn-submit {
+    grid-column: 1 / -1; /* Ocupa a linha toda no grid */
+    background-color:#27ae60;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+}
+@media(max-width: 768px){
+    body{
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+    }
+    .main-layout{
+        margin-left: 0;
+    }
+}
