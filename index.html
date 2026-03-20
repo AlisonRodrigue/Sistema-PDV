@@ -12,8 +12,8 @@
 <body>
     <div class="sidebar">
         <ul>
-            <li><a href="index.html" class="active">🏠 Painel Principal</a></li>
-            <li><a href="cadastroProdutos.html">📦 Sobre</a></li>
+            <li><a href="login.html" >🏠 Painel Principal</a></li>
+            <li><a href="index.html"class="active">📦 Sobre</a></li>
             <li><a href="vendas.html">💰 Duvidas</a></li>
             <li><a href="investimentos.html" >💰 Contato</a></li>
         </ul>
@@ -33,11 +33,26 @@
                     </div>
                     <div class="form-group">
                         <label for="Senha">Senha</label>
-                        <input type="password" id="senhaCliente" class="campoCliente" placeholder="Digite uma senha" required>
+                        <input type="password" id="senhaCliente1" class="campoCliente" placeholder="Digite uma senha" required>
+                        <span id="spanMenor">
+                            <p>A senha precisa conter no minimo 8 digitos.</p>
+                        </span>
+                        <span id="spanVazio">
+                            <p>Preencha os campos.</p>
+                        </span>
+                        <span id="spanDiferentes">
+                            <p >As senhas estão diferentes.</p>
+                        </span>
                     </div>
                     <div class="form-group">
                         <label for="Senha">Senha</label>
-                        <input type="password" id="senhaCliente" class="campoCliente" placeholder="Digite uma senha acima" required>
+                        <input type="password" id="senhaCliente2" class="campoCliente" placeholder="Digite uma senha acima" required>
+                        <span id="spanVazio">
+                            <p>Preencha os campos.</p>
+                        </span>
+                        <span id="spanDiferentes">
+                            <p >As senhas estão diferentes.</p>
+                        </span>   
                     </div>
                     <div class="btnCadastro">
                         <button id="btnCadastro" class="btn-submit" onclick="cadastro()">Cadastrar</button>
