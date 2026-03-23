@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goki</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="cadastroProduto.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">🛒 Mercearia Pai e Filho</div>
+        <ul>
+            <li><a href="../dashboard.html">🏠 Painel principal</a></li>
+            <li><a href="cadastro.html" class="active">📦 Cadastro</a></li>
+            <li><a href="caixa.html">💰 Caixa</a></li>
+            <li><a href="#">💰 Contato</a></li>
+        </ul>
+    </div>
+    <main class="content">
+        <div class="main-layout">
+            <form id="formProduto">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="id_produto">ID / Código</label>
+                        <input type="text" id="id_produto" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Nome:" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Distribuidora</label>
+                        <input type="text" id="distribuidora" placeholder="Nome:" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_val">Validade</label>
+                        <input type="date" id="data_val" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="preco_custo">Quantidade</label>
+                        <input type="number" id="quantidade" placeholder="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="preco_custo">Preço de Custo (Nota)</label>
+                        <input type="number" step="0.01" id="preco_custo" placeholder="0,00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="preco_venda">Preço de Venda</label>
+                        <input type="number" step="0.01" id="preco_venda" placeholder="0,00" required>
+                    </div>
+                    <button type="submit" class="btn-submit" onclick="Cadastrar()">Cadastrar Produto</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

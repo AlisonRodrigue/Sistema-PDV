@@ -11,6 +11,15 @@ body{
     background-color: #f0f2f5;
     min-height: 100vh;
 }
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .sidebar{
     width: 260px;
     height: 100vh;

@@ -1,0 +1,244 @@
+.content{
+    background-color: #1a1a1a;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.pdv-grid{
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 20px;
+    height: 90vh;
+}
+.search-bar{
+    display: flex;
+    gap: 15px;
+    background: rgb(51, 51, 51);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.input-group.qty{flex: 0 0 100px;}
+
+.input-group label{ 
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+.input-group input{
+    background: #000;
+    border: 2px solid #b71c1c;
+    color: #00ff00;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.items-list-container{
+    background: white;
+    color: #333;
+    border-radius: 8px;
+    height: calc(100% - 130px);
+    overflow-y: auto;
+}
+
+.pdv-table{width: 100%; border-collapse: collapse;}
+.pdv-table th{background: #eee; padding: 12px; text-align: left; position: sticky; top: 0;}
+.pdv-table td{padding: 12px; border-bottom: 1px solid #ddd; font-weight: 500;}
+
+.pdv-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-display{
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+#last-product-name{color: #f1c40f; margin-top: 15px; text-transform: uppercase;}
+
+.totals-panel{
+    background: #b71c1c;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: right;
+}
+
+.total-item{display: flex; justify-content: space-between; font-size: 1.2rem;}
+.main-total{font-size: 3rem; font-weight: 900; margin-top: 10px; border-top: 1px solid rgba(255,255,255,0.3); }
+
+.btn-finish{
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn-cancel{
+    background: transparent;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.shortcuts{ color: #888; font-size: 0.85rem; text-align: center;}
+
+@media(max-width: 1100px){
+    .pdv-grid{ grid-template-columns: 1fr; overflow-y: auto;}
+    .pdv-right{ margin-bottom: 50px;}
+}
+
+/* Estilos do Modal */
+
+#modal-pagamento {
+    display: none; /* Isso esconde o modal quando a página carrega */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fundo escuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex; /* Mude para 'none' para esconder inicialmente */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #fff;
+    width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #333;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    background: var(--primary); /* Vermelho da mercearia */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.total-venda-destaque {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.total-venda-destaque span { font-size: 0.9rem; color: #666; display: block; }
+.total-venda-destaque strong { font-size: 2.5rem; color: #b71c1c; }
+
+.metodos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 15px 0 25px 0;
+}
+
+.btn-metodo {
+    padding: 15px 10px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-metodo.active {
+    border-color: #27ae60;
+    background: #eafaf1;
+    color: #27ae60;
+}
+
+.calculo-troco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.troco-display {
+    text-align: right;
+}
+
+.troco-display strong {
+    font-size: 1.8rem;
+    display: block;
+    color: #27ae60;
+}
+
+.modal-footer {
+    padding: 20px;
+    background: #f1f1f1;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-confirmar-venda {
+    flex: 2;
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cancelar-venda {
+    flex: 1;
+    background: #95a5a6;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
